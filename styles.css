@@ -1,0 +1,217 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.left-side, .right-side {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-side {
+    margin-right: 20px;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.right-side {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+.centered-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+#text1, #text2 {
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+#text1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#text2 {
+    margin-bottom: 10px;
+}
+
+#text3 {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+#text4 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.calendly-inline-widget {
+    margin: 20px 0;
+    min-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Attempt to hide privacy popup */
+.calendly-inline-widget iframe {
+    overflow: hidden;
+}
+    
+.media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#video {
+    margin-bottom: 20px;
+}
+
+#presentation iframe {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#presentation a {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+#presentation a:hover {
+    background-color: #005bb5;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side, .right-side {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .centered-box {
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    #text1 {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    #text2 {
+        margin-bottom: 5px;
+    }
+
+    #text3 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .calendly-inline-widget {
+        width: 100%;
+        height: 60vh;
+        margin-bottom: 20px;
+    }
+
+    .media {
+        width: 100%;
+    }
+
+    #video, #presentation {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #video video, #presentation iframe {
+        width: 100%;
+        height: auto;
+    }
+}

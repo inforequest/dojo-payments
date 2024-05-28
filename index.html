@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="centered-box">
+                <p id="text1">Thank you for requesting more information!</p>
+                <p id="text2">One of our colleagues will be in contact with you next working day between 10am - 1pm.</p>
+            </div>
+            <p id="text4">Discover our offer below!</p>
+            <div class="media">
+                <div id="video">
+                    <video width="560" height="315" controls>
+                        <source src="assets/Introducing the Dojo Go.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="presentation">
+                    <iframe src="assets/Dojo.pdf" width="560" height="315" allowfullscreen></iframe>
+                    <br>
+                    <a href="assets/Dojo.pdf" target="_blank">View our presentation in fullscreen</a>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <p id="text3">If the time doesn't suit you go ahead and reserve a specific time slot here:</p>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/michael_dojo/dojo-introduction" style="min-width:320px;height:80vh;"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+</body>
+</html>
